@@ -11,5 +11,20 @@ function getComputerChoice() {
     }
     else {
         return ("scissors")
-    } // conditional statement compares random number generated to specified value and returns string if true
+    } // conditional statement compares random number generated to specified value and returns string if true 
 }
+
+function playRound(playerSelection, computerSelection) {
+    if (computerSelection == "paper" && playerSelection) {
+        return ("You Lose! Paper beats Rock");
+    } else if (computerSelection == "scissors" && playerSelection){
+        return ("You win! scissors beats Rock");
+    } else {
+        return ("draw")
+    }
+
+}
+
+const playerSelection = "rock"; // constant choice by player but could also be a prompt 
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
