@@ -15,16 +15,24 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    if (computerSelection == "paper" && playerSelection) {
-        return ("You Lose! Paper beats Rock");
-    } else if (computerSelection == "scissors" && playerSelection){
-        return ("You win! scissors beats Rock");
+    if (playerSelection == "paper" && computerSelection == "rock" ) {
+        return ("You win! Paper beats Rock");
+    } else if (playerSelection == "rock" && computerSelection == "paper") {
+        return ("You lose! Paper beats Rock");
+    } else if (playerSelection == "scissors" && computerSelection == "paper"){
+        return ("You win! scissors beats paper");
+    } else if (playerSelection == "paper" && computerSelection == "scissors") {
+        return ("You lose! scissors beats paper");
+    } else if (playerSelection == "rock" && computerSelection == "scissors") {
+        return ("You win! rock beats scissors");
+    }else if (playerSelection == "scissors" && computerSelection == "rock") {
+        return ("You lose! rock beats scissors");
     } else {
         return ("draw")
     }
 
 }
 
-const playerSelection = "rock"; // constant choice by player but could also be a prompt 
+const playerSelection = prompt("choose: 'rock', 'paper' or 'scissor' ");// constant choice by player but could also be a prompt 
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
