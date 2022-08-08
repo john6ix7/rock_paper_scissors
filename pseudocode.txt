@@ -1,14 +1,21 @@
 -- Rock paper scissors pseudocode -- 
 
 # getComputerChoice algorithm 
-1: declare variable that generates random from 1-3
-2: create conditional statement that will match random if condition is true
-3: if condition is true return either rock, paper or scissors
-4: if false check again with if else statement
+1: Create variable ranNum that generates random number from 1-3
+2: create conditional statement that will match ranNum to string if condition is true
+3: IF ranNum is equal to 1 THEN
+    return 'rock' to the console 
+   ELSE IF ranNum is equal to 2 THEN 
+    return 'paper' to the console 
+   ELSE
+    return 'scissors' to the console 
+
 
 # playRound function
-1: declare variables playerSelection and computerSelection tht will be used as parameters. (playerSelection could be a user prompt or constant with prefixed values. computerSelection will utilize function already created)
-2: create function that take two parameters, playerSelection and computerSelection 
-3: create conditional statement that compares playerSelection and computerSelection
-4: check the output of both parameters. If one parameter is equal to one value and the other parameter is equal to another value then return an output 
-5: return the winner or loser once condition has been met
+1: create variable playerSelection and prompt user with a selection of choices 
+2: create variable computerSelection that will store the function getComputerChoice
+3: create function that take two parameters, playerSelection and computerSelection 
+4: create conditional statement that will compare playerSelection and computerSelection
+5: IF playerSelection equals 'rock' && compares equals 'scissors THEN
+    return 'you win' to the console 
+6: repeat this conditional statement for all subsequent comparisons
