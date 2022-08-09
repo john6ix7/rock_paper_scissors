@@ -10,12 +10,24 @@
    ELSE
     return 'scissors' to the console 
 
-
 # playRound function
-1: create variable playerSelection and prompt user with a selection of choices 
-2: create variable computerSelection that will store the function getComputerChoice
-3: create function that take two parameters, playerSelection and computerSelection 
-4: create conditional statement that will compare playerSelection and computerSelection
-5: IF playerSelection equals 'rock' && compares equals 'scissors THEN
-    return 'you win' to the console 
-6: repeat this conditional statement for all subsequent comparisons
+1: create variable compScore and set value = 0
+2: create variable userScore and set value = 0
+3: create variable playerSelection and prompt user with a selection of choices 
+4: create variable computerSelection that will store the function getComputerChoice
+5: create conditional statement that will compare playerSelection and computerSelection
+6: IF playerSelection equals 'rock' && compares equals 'scissors THEN
+    return 'you win' to the console and increment either userScore or compScore by 1
+7: repeat this conditional statement for all subsequent comparisons and increments
+
+# game function 
+1: create for loop to iterate the game for 5 rounds 
+2: FOR initialize variable i = 0 while i equals less than 5 increment i
+3: insert playRound into for loop to play game for 5 rounds 
+4: create conditional statement that will compare userScore and compScore to determine a winner
+5: IF userScore > compScore THEN 
+    console.log ("You win the game!")
+   ELSE IF  compScore > userScore THEN 
+    console.log ("You lose the game!")
+   ELSE THEN
+    console.log ("Tie!")
